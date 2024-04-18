@@ -6,8 +6,8 @@ body {
 
 #grid-container {
     display: grid;
-    grid-template-columns: 10vw 60vw 10vw;
-    grid-template-rows: 20vh auto auto auto auto auto 20px;
+    grid-template-columns: 10vw 80vw 10vw;
+    grid-template-rows: auto auto auto auto auto auto 20px;
 }
 
 .grid-item {
@@ -45,4 +45,9 @@ body {
 #uncategorized {
     grid-column: 2;
     grid-row: 6;
+}
+
+/* Setting browser defaults */
+p {
+    color:black;
 }
