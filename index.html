@@ -36,7 +36,8 @@
             <p>
                 Above you can see what the main page looked like while under development.
                 The graph uses "chartJS", and the data is stored on a database controlled by two REST-API's written in golang.
-                These API's are 
+                The input API, as the name suggests, takes input data either from the frontend, or from the sensors measuring electrical data. <br>
+                The output API exposes this data to any frontend users. The sensor data is quicksorted and sendt to the frontend in the format ChartJS expects.
             </p>
         </div>
         <div class="grid-item" id="low">
