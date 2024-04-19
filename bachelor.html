@@ -1,0 +1,34 @@
+---
+layout: default
+title: Bachelor project
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>
+            Bachelor project
+        </title>
+    </head>
+
+
+    <body>
+        <div>
+            <h2>Bachelor project</h2>
+            <p>
+                The bachelor project was to create a web-application that collects and shows electrical usage on a graph, made for factories.
+                In order for this to work, we needed both a back end and a front end. We used docker to simplify deployment (and gitlab runner to automate it). <br>
+                We built the frontend usin React, built using Vite (deployed using nginx).
+            </p>
+            <img src="images/bachelor-overview.png" width="700">
+            <p>
+                Above you can see what the main page looked like while under development.
+                The graph uses "chartJS", and the data is stored on a database controlled by two REST-API's written in golang.
+                The input API, as the name suggests, takes input data either from the frontend, or from the sensors measuring electrical data. <br>
+                The output API exposes this data to any frontend users. 
+            </p>
+        </div>
+    </body>
+</html>
