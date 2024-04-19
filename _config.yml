@@ -21,9 +21,9 @@
 title: Odin Aas, Student
 email: Odin.aas@outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Portfolio web-page for Odin Aas, previews some of my skills and previous projects.
+  My portfolio, preview some of my skills and previous projects. Feel free to send me an E-mail!
 baseurl: "/portfolio" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://odin-h8.github.io/portfolio/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  Odin-H8
 
 # Build settings
