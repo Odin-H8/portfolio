@@ -11,6 +11,7 @@ title: Bachelor project
         <title>
             Bachelor project
         </title>
+        <link rel="stylesheet" href="stylesheet.css">
     </head>
 
 
@@ -20,14 +21,18 @@ title: Bachelor project
             <p>
                 The bachelor project was to create a web-application that collects and shows electrical usage on a graph, made for factories.
                 In order for this to work, we needed both a back end and a front end. We used docker to simplify deployment (and gitlab runner to automate it). <br>
-                We built the frontend usin React, built using Vite (deployed using nginx).
+                We wrote the frontend using React with Typescript, built using Vite (deployed using nginx).
+                
             </p>
-            <img src="images/bachelor-overview.png" width="700">
+            <img src="images/bachelor-overview.png" width="700" class="image">
             <p>
                 Above you can see what the main page looked like while under development.
-                The graph uses "chartJS", and the data is stored on a database controlled by two REST-API's written in golang.
-                The input API, as the name suggests, takes input data either from the frontend, or from the sensors measuring electrical data. <br>
-                The output API exposes this data to any frontend users. 
+                The graph uses "chartJS", and the data is stored on a database controlled by two REST-API's written in Go.
+                The input API, as the name suggests, takes input data either from the frontend, or from the sensors measuring electrical data.
+                <br>
+                The REST-API is split up into two parts, the Input API, and the Output API. The input API handles all requests to write to the database, and the output API handles all read requests.
+
+
             </p>
         </div>
     </body>
