@@ -19,10 +19,20 @@ title: Bachelor project
         <div>
             <h2>Bachelor project</h2>
             <p>
-                The bachelor project was to create a web-application that collects and shows electrical usage on a graph, made for factories.
-                In order for this to work, we needed both a back end and a front end. We used docker to simplify deployment (and gitlab runner to automate it). <br>
-                We wrote the frontend using React with Typescript, built using Vite (deployed using nginx).
-                
+                The task we were provided with was to create a full-stack web application. It should consist of a frontend, backend and a database. <br>
+                The application should provide a user with the data collected by sensors placed on electrical consumers in a simple and intuitive way (we chose a timeseries graph).
+                The choice of technologies regarding development was fully up to us, but the electrical sensors and gateways was already chosen to be the <a href="https://vutility.com/hotdrop">Vutility HotDrop</a> and the <a href="https://store.rakwireless.com/products/rak7268-8-channel-indoor-lorawan-gateway?m=3&h=wisgate-edge&variant=42316476678342">WisGate Edge Lite 2</a>.
+            </p>
+            <h3>The Technologies</h3>
+            <p>
+                The project makes use of a wide scope of technologies and an overview of everything used can be seen in the image below.
+            </p>
+            <img src="images/Technology-struct.png" width="600" class="image">
+            
+            <h3>The project itself</h3>
+            <p>
+                As this was a group task, we divided the task up into three parts, as we were a group of three people. These were: Frontend (Design), Backend (API's and database) and LoRaWAN server (connection and data collection). <br>
+                We wrote the frontend using React with Typescript and Vite (deployed using nginx). The backend uses Go to write the API, and MariaDB to host the database. Chirpstack is used as the LoRaWAN network server.
             </p>
             <img src="images/bachelor-overview.png" width="700" class="image">
             <p>
@@ -31,8 +41,10 @@ title: Bachelor project
                 The input API, as the name suggests, takes input data either from the frontend, or from the sensors measuring electrical data.
                 <br>
                 The REST-API is split up into two parts, the Input API, and the Output API. The input API handles all requests to write to the database, and the output API handles all read requests.
-
-
+            </p>
+            <br>
+            <p>
+                This solution is dockerized into containers. Frontend using nginx's base image, backend using Go's base image and the LoRaWAN network server using its own containers.
             </p>
         </div>
     </body>
